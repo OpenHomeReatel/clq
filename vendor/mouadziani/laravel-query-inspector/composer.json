@@ -1,0 +1,44 @@
+{
+    "name": "mouadziani/laravel-query-inspector",
+    "description": "The missing laravel helper that allows you to ispect your eloquent queries with their binding parameters",
+    "keywords": [
+        "mouadziani",
+        "laravel",
+        "laravel-query-inspector"
+    ],
+    "homepage": "https://github.com/mouadziani/laravel-query-inspector",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "MouadZIANI",
+            "email": "mouad.ziani1997@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "illuminate/database": "~5.6.0|~5.7.0|~5.8.0|^6.0.0|^7.0.0|^8.0.0",
+        "illuminate/support": "^6.0 || ^7.0 || ^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mouadziani\\LaravelQueryInspector\\": "src"
+        }
+    },
+    "scripts": {
+        "psalm": "vendor/bin/psalm",
+        "test": "./vendor/bin/testbench package:test --parallel --no-coverage",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mouadziani\\LaravelQueryInspector\\LaravelQueryInspectorServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
